@@ -6,6 +6,7 @@
     height: 80px;
     flex: 0 0 auto;
     font-family: 'Oswald', sans-serif;
+    justify-content: space-between;
     // background: yellow;
     .headerTxt{
         padding: 0 0 0 6%;
@@ -36,60 +37,212 @@
         justify-content: space-between;
         flex-basis: 50%;
         align-items: center;
-        .btnCatalog{
-            background-color: #FF4D4D;
-            height: 70%;
+        .mainBurger{
             width: 30%;
-            font-size: 20px;
+            height: 100%;
+            background: #1d7c7c;
             color: white;
-            padding-bottom: 1%;
             display: flex;
-            align-items: center;
             justify-content: center;
-            &:hover{
-                background: #ffffff;
-                color:#FF4D4D;
-                border: 1px solid #FF4D4D;
-                box-shadow: 0 0 10px #FF4D4D, 0 0 40px;
+            align-items: center;
+            display: none;
+            font-size: 35px;
+            .btnOnBurger{
+                font-size: 35px;
             }
         }
-        .btnAbout{
-            background: #4B4646;
-            height: 70%;
-            width: 30%;
-            font-size: 20px;
-            color: white;
-            padding-bottom: 1%;
+        .menuBurger{
             display: flex;
-            align-items: center;
-            justify-content: center;
-            &:hover{
-                background: #ffffff;
-                color:#4B4646;
-                border: 1px solid #4B4646;
-                box-shadow: 0 0 10px #4B4646, 0 0 40px;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+            .notMainBurger{
+                width: 30%;
+                height: 100%;
+            }
+            .btnCatalog{
+                height: 100%;
+                width: 100%;
+                flex-basis: 30%;
+                font-size: 20px;
+                color: white;
+                padding-bottom: 1%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #FF4D4D;
+                &:hover{
+                    background: #ffffff;
+                    color:#FF4D4D;
+                    border: 1px solid #FF4D4D;
+                    box-shadow: 0 0 10px #FF4D4D, 0 0 40px;
+                }
+                &:active{
+                    background: #ffffff;
+                    color:#FF4D4D;
+                    border: 1px solid #FF4D4D;
+                    box-shadow: 0 0 10px #FF4D4D, 0 0 40px;
+                }
+            }
+            .btnAbout{
+                height: 100%;
+                width: 100%;
+                font-size: 20px;
+                color: white;
+                padding-bottom: 1%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #4B4646;
+                &:hover{
+                    background: #ffffff;
+                    color:#4B4646;
+                    border: 1px solid #4B4646;
+                    box-shadow: 0 0 10px #4B4646, 0 0 40px;
+                }
+                &:active{
+                    background: #ffffff;
+                    color:#4B4646;
+                    border: 1px solid #4B4646;
+                    box-shadow: 0 0 10px #4B4646, 0 0 40px;
+                }
+            }
+            .btnContascts{
+                height: 100%;
+                width: 100%;
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                padding-bottom: 1%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #4B4646;
+                &:hover{
+                    background: #ffffff;
+                    color:#4B4646;
+                    border: 1px solid #4B4646;
+                    box-shadow: 0 0 10px #4B4646, 0 0 40px;
+                }
             }
         }
-        .btnContascts{
-            height: 70%;
+        .btnBurger{
             background: #4B4646;
-            width: 30%;
-            font-size: 20px;
+            width: 80%;
+            height: 100%;
             color: white;
-            text-align: center;
-            padding-bottom: 1%;
-            display: flex;
-            align-items: center;
+            font-size: 25px;
+            display: none;
+            
+        }
+        
+    }
+}
+
+@media (max-width:1000px){
+    .mainHeader{
+        display: flex;
+        width: 100vw;
+        flex-direction: row;
+        height: 200px;
+        justify-content: space-between;
+        .headerTxt{
+            padding: 0 0 0 0%;
             justify-content: center;
-            &:hover{
-                background: #ffffff;
-                color:#4B4646;
-                border: 1px solid #4B4646;
-                box-shadow: 0 0 10px #4B4646, 0 0 40px;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 0 0 0%;
+            .titleHeader{
+                font-size: 45px;
+                padding: 0;
+                margin: 0;
+                flex-basis: 0;
+            }
+            .bodyHeader{
+                padding: 20px 0 0 0 ;
+                margin: 0;
+                flex-basis: 0;
+            }
+        }
+        .headerBtn{
+            padding: 0 0 0 0;
+            // flex-basis: 50%;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background: #FF4D4D;
+            .mainBurger{
+                display: flex;
+                text-align: center;
+                z-index: 100;
+                height: 100%;
+                width: 100%;
+                background: #FF4D4D;
+                // position: fixed;   
+                // height: 28%;
+                // width: 50%; 
+                .btnOnBurger{
+                    font-size: 40px;
+                    // margin-bottom: 50px;
+                }
+                
+            }
+            .menuBurger{
+                position: fixed;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                z-index: 99;
+                top: 0px;
+                margin-top: 50px;
+                width: 100%;
+                // height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
+                .notMainBurger{
+                    height: 10%;
+                    background: #4B4646;
+                    width: 50%;
+                    height: 20%;
+                    border-bottom: 2px solid white;
+                    font-size: 30px;
+                    .btnAbout{
+                        p{
+                            font-size: 50px;
+                        }
+                    }
+                    .btnContascts{
+                        p{
+                            font-size: 50px;
+                        }
+                    }
+                    .btnCatalog{
+                        background: #4B4646;
+                        p{
+                            font-size: 50px;
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+@media (max-width:650px){
+    .mainHeader{
+        .headerTxt{
+            .titleHeader{
+                font-size: 25px;
+                padding: 0;
+                margin: 0;
+                flex-basis: 0;
+            }
+        }
+    }
+    
+}
+
 @media (max-width:510px){
     .mainHeader{
         width: 100vh;

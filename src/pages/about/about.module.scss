@@ -1,3 +1,22 @@
 .aboutConteiner{
     color:black;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    min-height: 140vh;
+    .imgAbout{
+        background: url('./log.jpg')0 0/100% 100% no-repeat;;
+        width: 400px;
+        height: 300px;
+    }
+    h1{
+        font-size: 40px;
+        padding: 10px 20px 10px 20px;
+    }
+    p{
+        font-size: 20px;
+        padding: 5px 40px 15px 40px;
+    }
 }

@@ -1,7 +1,7 @@
 .conteinerFirst{
     // height: 80vh;
     // flex-basis: 80%;
-    height: 100vh;
+    height: 600px;
     width: 100%;
     display: flex;
     .firstBlock{
@@ -29,6 +29,12 @@
                 align-items: center;
             }
         }
+    }
+}
+
+@media (max-width: 1100px){
+    .conteinerFirst{
+        height: 800px;
     }
 }
 

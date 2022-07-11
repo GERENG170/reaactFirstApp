@@ -3,11 +3,15 @@ iframe{
 }
 
 .conteinerForm{
+    padding-top: 0;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: right;
+    width: 100%;
+    min-height: 100vh;
     // margin: 0 0 20px 0;
     .predupKorz{
         // padding-top: 2%;
@@ -18,7 +22,9 @@ iframe{
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
-        
+        width: 100%;
+        align-items: center;
+        justify-content: center;
         .Label{
             display: flex;
             flex-direction: column;
@@ -27,20 +33,19 @@ iframe{
             align-items:center;
             // justify-content: center;
             text-align: center;
-            
-            
                 .namePageKorz{
                     display: flex;
                     font-family: 'Oswald', sans-serif;
                     font-size: 50px;
-                    color: rgb(255, 255, 255);
-                    height: 15vh;
+                    color: #FF4D4D;
+                    height: 100px;
                     align-items: center;
                     justify-content: center;
-                    background: rgb(92, 92, 92);
+                    background: rgba(255, 255, 255, 0.5);
                     width: 100%;
                     text-transform: uppercase;
-                    border-bottom: 1px solid black;
+                    // border-bottom: 1px solid black;
+
                 } 
                 .titleKorzName{
                     padding: 2% 10% 0 10%;
@@ -48,17 +53,27 @@ iframe{
                     flex-direction: row;
                     text-transform: uppercase;
                     justify-content: center;
-                    align-items: center;
+                    // align-items: center;
                     width: 100%;
                     padding-bottom: 1%;
-                    .tagPName{
+                    // text-align: center;
+                    .tagPNameDiv{
+                        background: #FF4D4D;
+                        height: 70px;
+                        width: 20%;
+                        flex-basis: 20%;
                         display: flex;
-                        flex-basis: 30%;
-                        color: black;
-                        font-family: 'Oswald', sans-serif;
-                        font-size: 20px;
+                        align-items: center;
+                        justify-content: center;
+                        .tagPName{
+                            display: flex;
+                            color: rgb(255, 255, 255);
+                            font-family: 'Oswald', sans-serif;
+                            font-size: 30px;
+                            
+                            
+                        }
                     }
-                    
                     .nameHolder{
                         font-family: 'Oswald', sans-serif;
                         font-size: 20px;
@@ -66,7 +81,10 @@ iframe{
                         flex-basis:70%;
                         text-align: center;
                         width: 100%;
-                        border: 1px solid black;
+                        border-bottom: 1px solid black;
+                        border-top: 1px solid black;
+                        border-right: 1px solid black;
+                        height: 70px;
                         }
                         .nameHolder::-webkit-input-placeholder { color: black; }
                         .nameHolder::-moz-placeholder { color: black; }
@@ -82,22 +100,35 @@ iframe{
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    .tagPNumber{
+                    .tagPNumberDiv{
+                        background: #FF4D4D;
+                        height: 70px;
+                        width: 20%;
+                        flex-basis: 20%;
                         display: flex;
-                        flex-basis: 30%;
-                        color: black;
-                        font-family: 'Oswald', sans-serif;
-                        font-size: 20px;
+                        align-items: center;
+                        justify-content: center;
+                        .tagPNumber{
+                            display: flex;
+                            flex-basis: 30%;
+                            color: rgb(255, 255, 255);
+                            flex-basis: 25%;
+                            font-family: 'Oswald', sans-serif;
+                            font-size: 30px;
+                        }
                     }
+                    
                     .numberHolder{
                         font-family: 'Oswald', sans-serif;
                         font-size: 20px;
                         color: black;
                         flex-basis:70%;
                         text-align: center;
-                        border: 1px solid rgb(0, 0, 0);
-                        border-radius: 25px;
+                        border-bottom: 1px solid black;
+                        border-top: 1px solid black;
+                        border-right: 1px solid black;
                         width: 100%;
+                        height: 70px;
                     }
             
                 .numberHolder::-webkit-input-placeholder { color: black; }
@@ -106,45 +137,70 @@ iframe{
             .outVisionClass{
                 display: flex;
                 flex-direction: column;
-                // background: rgb(87, 87, 87);
+                width: 85%;
+                min-height: 600px;
+                // border: 2px solid rgb(0, 0, 0);
+                background: rgba(73, 73, 73, 0.2);
+                backdrop-filter: blur(0px);
                 align-items: center;
-                padding: 0% 6% 0 6%;
-                margin: 0 0 2% 0;
+                margin: 20px 0 2% 0;
+                padding-bottom: 2%;
                 .neZnayChto{
                     display: none;
                 }
                 .korzItem{
                     display: flex;
                     flex-direction: row;
-                    background: rgba(255, 255, 255, 0.2);
+                    background: rgba(190, 190, 190, 0.6);
                     backdrop-filter: blur(10px);
-                    width: 80%;
-                    
-                    border-bottom: 1px solid #000000;
-                    // border-top: 1px solid #000000;
-                    height: 50%;
+                    width: 90%;
+                    margin-top: 20px;
+                    height: 20vw;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &:hover{
+                        background: #FF4D4D;
+                        .liKorz{
+                            color: white;
+                        }
+                    }
+
                     .liKorz{
-                        padding: 20px;
+                        width: 100%;
                         display: flex;
                         flex-direction: row;
                         align-items: center;
-                        
+                        flex-direction: row;
+                        justify-content: center;
                         .imgOrder{
                             display: flex;
-                            width: 30vh;
-                            height: 25vh;
+                            height: 100%;
+                            flex-basis: 30%;
+                            width: 30%;
                         }
                         .itemNameOrder{
                             width: 100%;
                             text-align: center;
                             font-family: 'Oswald', sans-serif;
                             font-size: 20px;
+                            flex-basis: 10%;
+                            padding: 0 2% 0 2%;
                         }
                         .txtItemKorz{
+                            overflow: hidden;
+                    text-overflow: ellipsis;
+                            height: 80%;
                             text-align: left;
                             font-family: 'Oswald', sans-serif;
-                            font-size: 20px;
-
+                            font-size: 15px;
+                            flex-basis: 50%;
+                            padding: 20px 2% 20px 2%;
+                        }
+                        .sumItemKorz{
+                            text-align: left;
+                            font-family: 'Oswald', sans-serif;
+                            font-size: 15px;
+                            flex-basis: 10%;
                         }
                         
                     }
@@ -153,13 +209,15 @@ iframe{
                 }
             }
             .LinkBtnDel{
-                width: 20%;
-                height: 40px;
+                width: 100%;
+                height: 40%;
+                // background: #868686;
                 // margin-bottom: 10px;
                 // background: #000000;
                 font-family: 'Oswald', sans-serif;
                 font-size: 30px;
                 color: rgb(0, 0, 0);
+                padding-bottom: 20px;
                 text-align: center;
                 text-transform: uppercase;
                 // padding-top: 1%;
@@ -197,7 +255,7 @@ iframe{
         .submitSend{
             width: 20%;
             height: 80px;
-            margin: 10px 0 2% 40%;
+            margin: 10px 0 2% 0%;
             background: #FF4D4D;
             font-family: 'Oswald', sans-serif;
             font-size: 30px;
@@ -210,6 +268,233 @@ iframe{
                 color:#FF4D4D;
                 border: 1px solid #FF4D4D;
                 box-shadow: 0 0 10px #FF4D4D, 0 0 40px 
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .LinkBtnDel{
+
+                }
+                .changeObjBtn{
+                    width: 30%;
+                }
+            }
+            .submitSend{
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .titleKorzName{
+                    .tagPNameDiv{
+                        height: 60px;
+                        .tagPName{
+
+                        }
+                    }
+                    .nameHolder{
+                        height: 60px;
+                    }
+                }
+                .numberKorz{
+                    .tagPNumberDiv{
+                        height: 60px;
+                        .tagPNumber{
+
+                        }
+                    }
+                    .numberHolder{
+                        height: 60px;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width: 900px){
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .titleKorzName{
+                    .tagPNameDiv{
+                        height: 50px;
+                        .tagPName{
+                            font-size: 20px;
+                        }
+                    }
+                    .nameHolder{
+                        height: 50px;
+                    }
+                }
+                .numberKorz{
+                    .tagPNumberDiv{
+                        height: 50px;
+                        .tagPNumber{
+                            font-size: 20px;
+                        }
+                    }
+                    .numberHolder{
+                        height: 50px;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .titleKorzName{
+                    .tagPNameDiv{
+                        height: 40px;
+                        .tagPName{
+
+                        }
+                    }
+                    .nameHolder{
+                        height: 40px;
+                    }
+                }
+                .numberKorz{
+                    .tagPNumberDiv{
+                        height: 40px;
+                        .tagPNumber{
+
+                        }
+                    }
+                    .numberHolder{
+                        height: 40px;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+@media screen and (max-width:800px) {
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .namePageKorz{
+                    height: 100px;
+                }
+                .LinkBtnDel{
+
+                }
+                .changeObjBtn{
+                    width: 35%;
+                }
+            }
+            .submitSend{
+                width: 35%;
+            }
+        }
+    }
+}
+@media screen and (max-width:695px) {
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .LinkBtnDel{
+
+                }
+                .changeObjBtn{
+                    width: 45%;
+                }
+            }
+            .submitSend{
+                width: 45%;
+            }
+        }
+    }
+}
+@media screen and (max-width:545px) {
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .LinkBtnDel{
+
+                }
+                .changeObjBtn{
+                    width: 55%;
+                }
+            }
+            .submitSend{
+                width: 55%;
+            }
+        }
+    }
+}
+@media screen and (max-width:440px) {
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .LinkBtnDel{
+
+                }
+                .changeObjBtn{
+                    width: 65%;
+                }
+            }
+            .submitSend{
+                width: 65%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .conteinerForm{
+        .mainOrder{
+            .Label{
+                .namePageKorz{
+                    height: 50px;
+                    font-size: 20px;
+                }
+                .titleKorzName{
+                    .tagPNameDiv{
+                        height: 45px;
+                        .tagPName{
+                            font-size: 15px;
+                        }
+                    }
+                    .nameHolder{
+                        height: 45px;
+                    }
+                }
+                .numberKorz{
+                    .tagPNumberDiv{
+                        height: 45px;
+                        .tagPNumber{
+                            font-size: 15px;
+                        }
+                    }
+                    .numberHolder{
+                        height: 45px;
+                    }
+                    
+                }
             }
             
         }

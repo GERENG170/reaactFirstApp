@@ -9,8 +9,6 @@ import xxxx from "./itemPerem";
 import {Link} from "react-router-dom";
 import arr12 from "../components/arr";
 let al2 = [];
-
-// let arr = [1,2,3];
 let out = () => {
     let list2 = '';
     if(arr.length>0){
@@ -45,12 +43,12 @@ const SecondBlock = () => {
                 <div className={styles.bodyGalery}>
                     
                     {menu.map((item,index) => {
-                        if(item.if == 1){
+                        if(item.if === 1){
+                            // console.log(imgArr);
                         return (
                         <div className={styles.itemGalery} id={item.id}>
                             <Link to="/itemPage" className={styles.itemBody}>
-                                
-                                <img onClick={()=>{xxxx.splice(0,xxxx.length);xxxx.push(item.id);xxxx.push(item.img);xxxx.push(item.sum); xxxx.push(item.description);}} className={styles.imgItem }src={require(`./img/${item.img}`)} alt="" />
+                                <img src={`img/${item.img}`} onClick={()=>{xxxx.splice(0,xxxx.length);xxxx.push(item.id);xxxx.push(item.img);xxxx.push(item.sum); xxxx.push(item.description);}} className={styles.imgItem } alt="qwd" />
                                 
                             </Link>
                             <div className={styles.byeBlock}>
@@ -64,7 +62,7 @@ const SecondBlock = () => {
                                     },)
                                     zzz.unshift(al.length);
                                     let elem = document.getElementById("submitSendId");
-                                    elem.innerHTML = `КОРЗИНА (${zzz[0]})`;
+                                    elem.innerHTML = `<p>ПЕРЕЙТИ В КОРЗИНУ (${zzz[0]})</p>`;
                                     
                                     arr12.push(item.id);
                                     out();
@@ -81,7 +79,7 @@ const SecondBlock = () => {
                             return (
                                 <div className={styles.itemGalery} id={item.id}>
                                     <div className={styles.itemBody}>
-                                        <img className={styles.imgItem }src={require(`./img/${item.img}`)} alt="" />
+                                        <img src={`img/${item.img}`} className={styles.imgItem } alt="" />
                                         
                                     </div>
                                     <div className={styles.byeBlock}>

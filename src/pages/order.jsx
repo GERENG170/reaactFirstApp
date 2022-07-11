@@ -14,6 +14,7 @@ arrName1.map((item,index)=>{
     x2 = item.number;
   })
 }
+
 class Order extends React.Component {
     constructor(props) {
         super(props);
@@ -55,18 +56,21 @@ class Order extends React.Component {
                 <label className={styles.Label}>
                 <p className={styles.namePageKorz}>Подтвердите заказ</p>
                 <p className={styles.predupKorz}>Отправьте заявку на заказ. В ближайшее время наш менеджер свяжется с вами для подтверждения заказа. Оплата только при получении. Так-же можете написать нам в наш instagram-магазин для заказа товара. Спасибо =)</p>
+                <p className={styles.namePageKorz}>Доставка бесплатная</p>
                     <div className={styles.titleKorzName}>
-                      <p className={styles.tagPName}>ФИО</p>
+                      <div className={styles.tagPNameDiv}><p className={styles.tagPName}>ФИО</p></div>
+                      
                       
                       <input id="nH1" className={styles.nameHolder} type="text"  name="name" value={this.state.name}  onChange={this.handleChange} placeholder={x1}></input>
                     </div>
                     <div className={styles.numberKorz}>
-                      <p className={styles.tagPNumber}>номер телефона</p>
+                      <div className={styles.tagPNumberDiv}><p className={styles.tagPNumber}>телефон</p></div>
+                      
                       <input id = "nH2" className={styles.numberHolder} type="text"  name="phone" value={this.state.number} onChange={this.handleNumberChange} placeholder={x2}></input>
                     </div>
                     <ul id="outVision2" className={styles.outVisionClass} >
                         <p className={styles.neZnayChto}>{zzz.unshift(al.length)}</p>
-                        i
+                        
                         {al.map((item,index) => {
                           return(
                             
@@ -75,6 +79,7 @@ class Order extends React.Component {
                                 <img className={styles.imgOrder} src={require(`../components/img/${item.img}`)} alt="" />
                                 <h2 className={styles.itemNameOrder}>{item.name}</h2>
                                 <p className={styles.txtItemKorz}>{item.txt}</p>
+                                <p className={styles.sumItemKorz}>{item.sum}</p>
                                 </li>
                               </div>
                           )
@@ -104,9 +109,9 @@ class Order extends React.Component {
                   if(elem1.value.length != 0 && elem2.value.length != 0){
                   let elem3 = document.getElementById('hidenOut2');
                   elem3.value = arr12;
-                  
+                  alert("Спасибо за ваш заказ!")
                   window.location.href = '/';}
-                  else{alert("ERROR");
+                  else{
                     elem1.style.border = "2px solid #FF4D4D";
                     elem1.style.boxShadow = "0 0 10px #FF4D4D, 0 0 40px";
                     elem2.style.border = "2px solid #FF4D4D";

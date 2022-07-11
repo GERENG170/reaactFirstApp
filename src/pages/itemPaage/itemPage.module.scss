@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 3% 6% 0 6%;
+    min-height: 140vh;
+    padding: 3% 6% 3% 6%;
     .txtItemPage{
         display: flex;
         flex-direction: column;
@@ -21,8 +22,9 @@
         .byeBtn{
             margin: 4% 0 0 0;
             display: flex;
-            width: 30%;
-            height: 50px;
+            width: 50%;
+            height: 20%;
+            padding: 20px 0 20px 0;
             background: #FF4D4D;
             font-family: 'Oswald', sans-serif;
             font-size: 30px;
@@ -59,6 +61,131 @@
             padding-bottom: 5%;
             font-family: 'Oswald', sans-serif;
             font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 1250px){
+    .contItemPage{
+        .txtItemPage{
+            .byeBtn{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 1250px){
+    .contItemPage{
+        .txtItemPage{
+            .byeBtn{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 940px){
+    .contItemPage{
+        flex-direction: column;
+        align-items: center;
+        .txtItemPage{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            .bodyItemPage{
+                padding: 4% 0 4% 0;
+                font-size: 30px;
+            }
+            .byeBtn{
+                margin-bottom: 50px;
+                height: 50px;
+            }
+        }
+        .imgBlockItem{
+            width: 90%;
+            .imgItemPage{
+                width: 90%;
+                height: 40%;
+            }
+        }
+    }
+}
+@media (max-width: 690px){
+    .contItemPage{
+        flex-direction: column;
+        align-items: center;
+        .txtItemPage{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            .bodyItemPage{
+                padding: 4% 0 4% 0;
+                font-size: 30px;
+            }
+            .byeBtn{
+                margin-bottom: 50px;
+                height: 50px;
+            }
+        }
+        .imgBlockItem{
+            width: 90%;
+            .imgItemPage{
+                width: 70%;
+                height: 40vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 461px){
+    .contItemPage{
+        flex-direction: column;
+        align-items: center;
+        .txtItemPage{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            .bodyItemPage{
+                padding: 2% 0 0 0;
+            }
+            .byeBtn{
+                margin-bottom: 20px;
+                height: 50px;
+            }
+        }
+        .imgBlockItem{
+            width: 90%;
+            .imgItemPage{
+                width: 70%;
+                height: 30vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 461px){
+    .contItemPage{
+        flex-direction: column;
+        align-items: center;
+        .txtItemPage{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            .bodyItemPage{
+                padding: 2% 0 0 0;
+                font-size: 15px;
+            }
+            .byeBtn{
+                margin-bottom: 20px;
+                height: 50px;
+            }
+        }
+        .imgBlockItem{
+            width: 90%;
+            .imgItemPage{
+                width: 70%;
+                height: 20%;
+            }
         }
     }
 }

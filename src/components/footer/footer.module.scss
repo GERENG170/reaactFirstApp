@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     background: #403E3F;
-    width: 100%;
-    height: 150px;
-    padding-top: auto;
+    height: 30vh;
     text-align: center;
     color: #cecece;
     align-items: center;
+    // flex: 0 0 auto;
+    // padding: 100px 0 0 0 ;
     justify-content: center;
-    // margin-top: auto;
+    // flex: 0 0 auto;
     .inst{
         font-size: 40px;
         color: white;
@@ -24,19 +24,20 @@
     .more{
         padding: 0.5% 5% 0 5%;
         // padding-top: 6%;
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
 @media (max-width: 1000px){
     .footerBlock{
+        height: 30vh;
         .inst{
             a{
 
             }
         }
         .more{
-            font-size: 10px;
+            font-size: 13px;
         }
     }
 }

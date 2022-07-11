@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/header/header";
-import Main from "./pages/Main";
+import Main from "./pages/Main.jsx";
 import styles from "./App.module.scss";
 import About from "./pages/about/about"
 import Contacts from "./pages/contacts/contacts"
@@ -12,17 +12,18 @@ const App = () =>{
   return (
     <>
     <Header/>
-
+    <div id="bc1" className={styles.bigCont}>
     <Routes>
-    
+      
       <Route path="/" element={<Main/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contacts" element={<Contacts/>}/>
       <Route path="/order" element={<Order/>}/>
       <Route path="/itemPage" element={<ItemPage/>}/>
       
-    </Routes>
 
+    </Routes>
+    </div>
     <Footer/>
   </>
   )

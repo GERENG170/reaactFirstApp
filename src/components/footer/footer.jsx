@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../footer/footer.module.scss"
 
 const Footer = () => {
+    
     return (
         <footer className={styles.footerBlock}>
             <p className={styles.inst}><a href="https://www.instagram.com/shopairminsk.by/">INSTAGRAM</a></p>
@@ -11,5 +12,4 @@ const Footer = () => {
         </footer>
     )
 }
-
 export default Footer;

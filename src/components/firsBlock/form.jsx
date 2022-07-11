@@ -56,7 +56,7 @@ class Form extends React.Component {
                         }
                       );
                     }
-                    }>ПЕРЕЙТИ В КОРЗИНУ {zzz[0]}</Link>
+                    }><p>ПЕРЕЙТИ В КОРЗИНУ {zzz[0]}</p></Link>
                 <input type="hidden" name="act" value="order"></input>
                 <p id="outVision"></p>
                 </label>
